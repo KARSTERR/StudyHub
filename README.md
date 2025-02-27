@@ -1,6 +1,3 @@
-The `README.md` file already contains some information, but I will enhance it by including sections for the project description, features, installation, usage, and contribution guidelines.
-
-```markdown
 # StudyHub
 
 Yapay zekâ destekli, gerçek zamanlı grup çalışma ve ders notu paylaşım platformu.
@@ -75,6 +72,3 @@ Contributions are welcome! Please follow these steps:
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-```
-
-You can update your `README.md` file with this content to provide a comprehensive guide for your project.
