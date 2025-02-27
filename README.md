@@ -2,73 +2,73 @@
 
 Yapay zekâ destekli, gerçek zamanlı grup çalışma ve ders notu paylaşım platformu.
 
-## Features
+## Özellikler
 
-- Real-time group study sessions
-- AI-powered note sharing and organization
-- Cross-platform support (iOS, Android, Web)
-- User-friendly interface
+- Gerçek zamanlı grup çalışma oturumları
+- Yapay zekâ destekli not paylaşımı ve organizasyonu
+- Çapraz platform desteği (iOS, Android, Web)
+- Kullanıcı dostu arayüz
 
-## Getting Started
+## Başlarken
 
-This project is a starting point for a Flutter application.
+Bu proje, bir Flutter uygulaması için başlangıç noktasıdır.
 
-### Prerequisites
+### Gereksinimler
 
-- [Flutter](https://docs.flutter.dev/get-started/install) installed on your machine
+- Makinenizde [Flutter](https://docs.flutter.dev/get-started/install) yüklü olmalıdır.
 
-### Installation
+### Kurulum
 
-1. Clone the repository:
+1. Depoyu klonlayın:
     ```sh
     git clone https://github.com/KARSTERR/StudyHub.git
     cd StudyHub
     ```
 
-2. Install dependencies:
+2. Bağımlılıkları yükleyin:
     ```sh
     flutter pub get
     ```
 
-3. Run the application:
+3. Uygulamayı çalıştırın:
     ```sh
     flutter run
     ```
 
-### Resources
+### Kaynaklar
 
-A few resources to get you started if this is your first Flutter project:
+İlk Flutter projenizi geliştiriyorsanız, aşağıdaki kaynaklarla başlayabilirsiniz:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- [Laboratuvar: İlk Flutter uygulamanızı yazın](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Kullanışlı Flutter örnekleri](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the [online documentation](https://docs.flutter.dev/), which offers tutorials, samples, guidance on mobile development, and a full API reference.
+Flutter geliştirmeye başlamak için [çevrimiçi dokümantasyonu](https://docs.flutter.dev/) inceleyebilirsiniz. Bu kaynak, mobil geliştirme hakkında öğreticiler, örnekler, rehberler ve tam API referansı sunmaktadır.
 
-## Usage
+## Kullanım
 
-1. Sign up or log in to your account.
-2. Create or join a study group.
-3. Start sharing and organizing notes in real-time.
+1. Hesabınıza kaydolun veya giriş yapın.
+2. Bir çalışma grubu oluşturun veya katılın.
+3. Gerçek zamanlı olarak notları paylaşmaya ve düzenlemeye başlayın.
 
-## Contributing
+## Katkıda Bulunma
 
-Contributions are welcome! Please follow these steps:
+Katkılar hoş karşılanır! Lütfen aşağıdaki adımları takip edin:
 
-1. Fork the repository.
-2. Create a new branch:
+1. Depoyu forkladığınızdan emin olun.
+2. Yeni bir dal oluşturun:
     ```sh
     git checkout -b feature/YourFeature
     ```
-3. Make your changes and commit them:
+3. Değişikliklerinizi yapın ve commit edin:
     ```sh
-    git commit -m "Add some feature"
+    git commit -m "Yeni bir özellik ekle"
     ```
-4. Push to the branch:
+4. Dalınıza gönderin:
     ```sh
     git push origin feature/YourFeature
     ```
-5. Open a pull request.
+5. Bir pull request açın.
 
-## License
+## Lisans
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+Bu proje MIT Lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICENSE) dosyasına bakabilirsiniz.
