@@ -1,39 +1,28 @@
-import 'dart:convert';
-import 'package:http/http.dart' as http;
+// lib/services/counter_service.dart
+import 'package:shared_preferences/shared_preferences.dart';
 
 class CounterService {
-  final String baseUrl;
-
-  CounterService({this.baseUrl = 'http://10.0.2.2:8000'});
-
-  Future<int> getCounter(String id) async {
+  // Get counter value from local storage
+  Future<int> getCounter(String counterId) async {
     try {
-      final response = await http.get(Uri.parse('$baseUrl/counters/$id'));
-      if (response.statusCode == 200) {
-        return jsonDecode(response.body)['value'];
-      } else {
-        throw Exception('Failed to load counter');
-      }
+      // Load from local storage
+      final prefs = await SharedPreferences.getInstance();
+      return prefs.getInt('counter_$counterId') ?? 0;
     } catch (e) {
-      throw Exception('Failed to connect to server: $e');
+      // Return default value if error
+      return 0;
     }
   }
 
-  Future<int> updateCounter(String id, int value) async {
+  // Update counter locally
+  Future<int> updateCounter(String counterId, int newValue) async {
     try {
-      final response = await http.post(
-        Uri.parse('$baseUrl/counters/$id'),
-        headers: {'Content-Type': 'application/json'},
-        body: jsonEncode({'value': value}),
-      );
-
-      if (response.statusCode == 200) {
-        return jsonDecode(response.body)['value'];
-      } else {
-        throw Exception('Failed to update counter');
-      }
+      // Save to local storage
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setInt('counter_$counterId', newValue);
+      return newValue;
     } catch (e) {
-      throw Exception('Failed to connect to server: $e');
+      throw Exception('Failed to update counter: $e');
     }
   }
 }
