@@ -31,6 +31,10 @@ class AuthService {
           key: 'username',
           value: data['user']['username'],
         );
+        await _secureStorage.write(
+          key: 'user_id',
+          value: data['user']['id'].toString(),
+        );
         return true;
       } else {
         return false;
@@ -41,11 +45,11 @@ class AuthService {
   }
 
   Future<bool> register(
-    String username,
-    String password, {
-    String? email,
-    String? fullName,
-  }) async {
+      String username,
+      String password, {
+        String? email,
+        String? fullName,
+      }) async {
     try {
       final response = await http.post(
         Uri.parse('$baseUrl/auth/register'),
@@ -68,6 +72,10 @@ class AuthService {
         await _secureStorage.write(
           key: 'username',
           value: data['username'],
+        );
+        await _secureStorage.write(
+          key: 'user_id',
+          value: data['user_id'].toString(),
         );
         return true;
       }
@@ -97,5 +105,9 @@ class AuthService {
 
   Future<String?> getUsername() async {
     return await _secureStorage.read(key: 'username');
+  }
+
+  Future<String?> getUserId() async {
+    return await _secureStorage.read(key: 'user_id');
   }
 }
